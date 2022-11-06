@@ -49,7 +49,7 @@ class userController extends Controller
             ]
             );
             
-            if($request->remember==1){
+            if($request->remember=="yes"){
                 $request->remember=true;
             }else{
                 $request->remember=false;
