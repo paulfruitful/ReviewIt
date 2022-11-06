@@ -19,14 +19,11 @@ class userController extends Controller
      $formData=$request->validate(
         [
           'name'=>'required|min:8',
-          'email'=>'required|email|unique:users:email|email:rfc,dns',
+          'email'=>'required|email|unique:users|email:rfc,dns',
           'password'=>['required','min:6','confirmed'],
-          'username'=>'required|min:8|unique:users'
-
+        
         ]
         );
-        $form_data['ip']=$request->ip();
-        $form_data['followers']=1;
         $formData['password']=bcrypt($formData['password']);
         $user=User::create($formData);
         Notification::send($user,new Welcome($user->name));
