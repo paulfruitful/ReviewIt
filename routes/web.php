@@ -24,3 +24,7 @@ Route::post('/login',function(){
     return view('user.login');
 });
 Route::post('/login',[userController::class,'login']);
+
+Route::get('/user/{user}',function(){
+    return view('user.profile');
+});
