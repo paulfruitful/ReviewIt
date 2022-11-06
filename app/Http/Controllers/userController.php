@@ -29,7 +29,7 @@ class userController extends Controller
        // Notification::send($user,new Welcome($user->name));
   
         auth()->login($user);
-     return redirect('/')->with('success','Account Created Successfully');
+     return redirect('/user/'.auth()->id())->with('success','Account Created Successfully');
     }
     //User logout function
     public function logout(Request $request){
@@ -55,7 +55,7 @@ class userController extends Controller
             
             if(auth()->attempt($form_data,$request->remember)){
                 $request->session()->regenerate();
-                return redirect('/')->with('success','Account Logged In Successfully');
+                return redirect('/user/'.auth()->id())->with('success','Account Logged In Successfully');
 
             }
             return back()->withErrors(['error'=>'Invalid Login Details']);

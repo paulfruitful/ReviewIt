@@ -17,13 +17,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::middleware('guest')->group(function(){
+    
 Route::get('/register',[userController::class,'create']);
 Route::post('/register',[userController::class,'store']);
 
 Route::get('/login',function(){
     return view('user.login');
 });
+
 Route::post('/login',[userController::class,'login']);
+});
+Route::get('/user',function(){
+   return redirect('/user/'. auth()->id());
+});
+Route::post('/logout',[userController::class,'logout']);
 
 Route::get('/user/{user}',function(){
     return view('user.profile');
