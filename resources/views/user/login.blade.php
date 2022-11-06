@@ -595,7 +595,7 @@ form .content label{
                <input type="password" required>
                <label>Password</label>
                @error('password')
-               <p style="color: #ca190c">{{$message}}</p>
+               <p style="color: #ca190c; margin:auto;">{{$message}}</p>
            @enderror
             </div>
             <div class="content">
