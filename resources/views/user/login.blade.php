@@ -582,15 +582,21 @@ form .content label{
          <div class="title">
             LOGIN 
          </div>
-         <form action="/login">
+         <form action="/login" method="POST">
             @csrf
             <div class="field">
                <input type="email" required>
                <label>Email Address</label>
+               @error('email')
+                   <p style="color: #ca190c">{{$message}}</p>
+               @enderror
             </div>
             <div class="field">
                <input type="password" required>
                <label>Password</label>
+               @error('password')
+               <p style="color: #ca190c">{{$message}}</p>
+           @enderror
             </div>
             <div class="content">
                <div class="checkbox">
