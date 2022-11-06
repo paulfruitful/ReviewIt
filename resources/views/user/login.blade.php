@@ -582,7 +582,8 @@ form .content label{
          <div class="title">
             LOGIN 
          </div>
-         <form action="#">
+         <form action="/login">
+            @csrf
             <div class="field">
                <input type="email" required>
                <label>Email Address</label>
