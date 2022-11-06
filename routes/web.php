@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::get('/register',[userController::class,'create']);
 Route::post('/register',[userController::class,'store']);
 
-Route::post('/login',function(){
+Route::get('/login',function(){
     return view('user.login');
 });
 Route::post('/login',[userController::class,'login']);
