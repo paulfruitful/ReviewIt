@@ -15,7 +15,7 @@ class userController extends Controller
     }
     //Store users profile
     public function store(Request $request){
-        dd($request);
+        
      $formData=$request->validate(
         [
           'name'=>'required|min:8',
