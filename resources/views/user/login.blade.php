@@ -16,7 +16,8 @@
          />
        </div>
        <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-         <form>
+         <form action="/login" method="POST">
+            @csrf
            <!-- Email input -->
            <div class="mb-6">
              <input
