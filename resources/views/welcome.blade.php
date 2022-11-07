@@ -22,11 +22,8 @@
              Review<span class="text-3xl text-green-600 ">It</span>
             </a>
           </div>
-          <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
-           
-            </ul>
-          </div>
-          <div class="flex items-center items-center lg:ml-auto">
+          
+          <div class="flex items-center items-center lg:ml-auto   ">
             <a class="inline-block px-6 py-2.5 mr-2 bg-transparent text-green-600 font-medium text-xs leading-tight uppercase rounded hover:text-green-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" href="/login">Login</a>
             <a class="inline-block px-6 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" href="/register">Sign up for free</a>
           </div>
@@ -37,12 +34,12 @@
         <div class="container mx-auto xl:px-32">
           <div class="grid lg:grid-cols-2 gap-12 flex items-center">
             <div class="mt-12 lg:mt-0">
-              <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">The best offer <br /><span class="text-blue-600">for your business</span></h1>
+              <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">Getting customer reviews <br /><span class="text-green-600">on your products</span></h1>
               <p class="text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-                quibusdam tempora at cupiditate quis eum maiores libero
-                veritatis? Dicta facilis sint aliquid ipsum atque?
+                Boost Your Relationship With Your Customers.<br>
+                Getting opinions from your customers provides an avenue for you to improve your products. <br>
+                Do you want a good relationship with your customers?
+                If yes sign up now and start reviewing your products, do not forget a happy customer equates a happy business
               </p>
             </div>
             <div class="mb-12 lg:mb-0">
@@ -87,6 +84,42 @@
   </div>
   <!-- Container for demo purpose -->
   </div>
+  <!-- Container for demo purpose -->
+ <!-- Container for demo purpose -->
+<div class="container my-24 px-6 mx-auto">
+
+    <!-- Section: Design Block -->
+    <section class="mb-32 text-gray-800 text-center">
+      <div class="grid gap-x-6 lg:gap-x-12 md:grid-cols-3">
+        <div class="mb-12 md:mb-0">
+          <h2 class="text-3xl font-bold display-5 text-blue-600 mb-4">1000</h2>
+          <h5 class="text-lg font-medium mb-4">Happy customers</h5>
+          <p class="text-gray-500">
+            Laudantium totam quas cumque pariatur at doloremque hic quos quia eius
+          </p>
+        </div>
+  
+        <div class="mb-12 md:mb-0">
+          <h2 class="text-3xl font-bold display-5 text-blue-600 mb-4">70%</h2>
+          <h5 class="text-lg font-medium mb-4">Growth</h5>
+          <p class="text-gray-500">
+            Eum nostrum fugit numquam, voluptates veniam neque quibusdam ullam
+          </p>
+        </div>
+  
+        <div class="mb-12 md:mb-0">
+          <h2 class="text-3xl font-bold display-5 text-blue-600 mb-4">49</h2>
+          <h5 class="text-lg font-medium mb-4">Projects</h5>
+          <p class="text-gray-500">
+            Enim cupiditate, minus nulla dolor cumque iure eveniet facere ullam potistas
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Design Block -->
+  
+  </div>
+  <!-- Container for demo purpose -->
   <!-- Container for demo purpose -->
 </body>
 </html>
