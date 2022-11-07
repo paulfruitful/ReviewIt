@@ -33,7 +33,7 @@ Route::post('/login',[userController::class,'login']);
 Route::get('/user',function(){
    return redirect('/user/'. auth()->id());
 });
-Route::post('/logout',[userController::class,'logout']);
+Route::get('/logout',[userController::class,'logout']);
 
 Route::get('/user/{user}',function(){
     return view('user.profile');
