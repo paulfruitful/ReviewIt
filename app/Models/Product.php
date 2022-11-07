@@ -13,6 +13,7 @@ class Product extends Model
     protected $fillable=[
         'title',
         'description',
+        'author',
         'upvote',
         'downvote'
     ];
