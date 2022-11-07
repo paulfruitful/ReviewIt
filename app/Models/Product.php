@@ -10,7 +10,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Product extends Model
 {
     use HasFactory;
-
+    protected $fillable=[
+        'title',
+        'description',
+        'upvote',
+        'downvote'
+    ];
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
