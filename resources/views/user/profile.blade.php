@@ -141,7 +141,7 @@
 
 		<div class="mt-auto flex items-center text-red-700 dark:text-red-400">
 			<!-- important action -->
-			<a href="#home" class="flex items-center">
+			<a href="/logout" class="flex items-center">
 				<svg class="fill-current h-5 w-5" viewBox="0 0 24 24">
 					<path
 						d="M16 17v-3H9v-4h7V7l5 5-5 5M14 2a2 2 0 012
