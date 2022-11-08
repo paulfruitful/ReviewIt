@@ -36,7 +36,6 @@
             <div class="mt-12 lg:mt-0">
               <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">Getting customer reviews <br /><span class="text-green-600">on your products</span></h1>
               <p class="text-gray-600">
-                Boost Your Relationship With Your Customers.<br>
                 Getting opinions from your customers provides an avenue for you to improve your products. <br>
                 Do you want a good relationship with your customers?
                 If yes sign up now and start reviewing your products, do not forget a happy customer equates a happy business
