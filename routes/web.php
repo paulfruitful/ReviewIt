@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\productController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +35,8 @@ Route::get('/user',function(){
    return redirect('/user/'. auth()->id());
 });
 Route::get('/logout',[userController::class,'logout']);
+
+Route::get('/product/create',[productController::class,'create']);
 
 Route::get('/user/{user}',function(){
     return view('user.profile');
