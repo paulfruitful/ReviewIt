@@ -36,9 +36,9 @@
             <div class="mt-12 lg:mt-0">
               <h1 class="text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight mb-12">Getting customer reviews <br /><span class="text-green-600">on your products</span></h1>
               <p class="text-gray-600">
-                Getting opinions from your customers provides an avenue for you to improve your products. <br>
-                Do you want a good relationship with your customers?
-                If yes sign up now and start reviewing your products, do not forget a happy customer equates a happy business
+                Getting opinions from your customers helps you improve your business. 
+                Do you want a good relationship with your customers? if yes sign up now.
+                
               </p>
             </div>
             <div class="mb-12 lg:mb-0">
@@ -91,26 +91,26 @@
     <section class="mb-32 text-gray-800 text-center">
       <div class="grid gap-x-6 lg:gap-x-12 md:grid-cols-3">
         <div class="mb-12 md:mb-0">
-          <h2 class="text-3xl font-bold display-5 text-blue-600 mb-4">1000</h2>
+          <h2 class="text-3xl font-bold display-5 text-green-600 mb-4">100%</h2>
           <h5 class="text-lg font-medium mb-4">Happy customers</h5>
           <p class="text-gray-500">
-            Laudantium totam quas cumque pariatur at doloremque hic quos quia eius
+            Build A Better Relationship With Your Customers.
           </p>
         </div>
   
         <div class="mb-12 md:mb-0">
-          <h2 class="text-3xl font-bold display-5 text-blue-600 mb-4">70%</h2>
+          <h2 class="text-3xl font-bold display-5 text-green-600 mb-4">100%</h2>
           <h5 class="text-lg font-medium mb-4">Growth</h5>
           <p class="text-gray-500">
-            Eum nostrum fugit numquam, voluptates veniam neque quibusdam ullam
+            Gaining A Better Reputation Increases Growth
           </p>
         </div>
   
         <div class="mb-12 md:mb-0">
-          <h2 class="text-3xl font-bold display-5 text-blue-600 mb-4">49</h2>
-          <h5 class="text-lg font-medium mb-4">Projects</h5>
+          <h2 class="text-3xl font-bold display-5 text-green-600 mb-4">Unlimited </h2>
+          <h5 class="text-lg font-medium mb-4">Product Reviews</h5>
           <p class="text-gray-500">
-            Enim cupiditate, minus nulla dolor cumque iure eveniet facere ullam potistas
+            Get Your Customers Opinions On Your Business Decisions
           </p>
         </div>
       </div>
