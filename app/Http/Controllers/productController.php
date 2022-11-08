@@ -18,4 +18,10 @@ class productController extends Controller
             return abort('404');
           }
     }
+
+    public function upvote(Product $product){
+     $product->upvote+=1;
+     $product->save();
+     return back();
+    }
 }
