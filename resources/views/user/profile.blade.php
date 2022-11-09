@@ -142,8 +142,8 @@
 
 			
 			<div
-				class="mt-8 mb-4 flex px-4 py-4 justify-between bg-white
-				dark:bg-gray-600 shadow-xl rounded-lg cursor-pointer md:flex">
+				class="mt-8 mb-4 flex px-4 py-4 justify-between items-center bg-white
+				dark:bg-gray-600 shadow-xl rounded-lg cursor-pointer w-screen " style="margin-left:-39px; width:100vw;">
 				<!-- Card -->
 
 				<div class="flex ">
