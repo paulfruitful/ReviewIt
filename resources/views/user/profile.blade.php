@@ -6,7 +6,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<div class="h-screen w-full flex overflow">
+<div class="h-screen w-screen flex overflow">
 	
 	<main
 		class="flex-1 flex flex-col bg-gray-100 dark:bg-gray-700 transition
@@ -27,22 +27,7 @@
 						transition duration-500 ease-in-out" href="/user/{{auth()->id()}}/">
 						home
 					</a>
-					<a
-						class="ml-6 py-2 block border-b-2 border-transparent
-						focus:outline-none font-medium capitalize text-center
-						focus:text-green-500 focus:border-green-500
-						dark-focus:text-green-200 dark-focus:border-green-200
-						transition duration-500 ease-in-out" href="/user/{{auth()->id()}}/products">
-						products
-				</a>
-					<a
-						class="ml-6 py-2 block border-b-2 border-transparent
-						focus:outline-none font-medium capitalize text-center
-						focus:text-green-500 focus:border-green-500
-						dark-focus:text-green-200 dark-focus:border-green-200
-						transition duration-500 ease-in-out" href="/user/{{auth()->id()}}/feedbacks">
-						feedbacks
-				</a>
+					
 				<a
 						class="ml-6 py-2 block border-b-2 border-transparent
 						focus:outline-none font-medium capitalize text-center
@@ -51,7 +36,8 @@
 						transition duration-500 ease-in-out" href="/user/{{auth()->id()}}/settings">
 						profile
 				</a>
-				<div class="ml-12 flex items-center text-red-700 dark:text-red-400">
+				<div class="ml-6 py-2 px-3 block border-b-2 border-transparent
+				focus:outline-none font-medium transition duration-500 ease-in-out capitalize text-center text-red-700 dark:text-red-400">
 					<!-- important action -->
 					<a href="/logout" class="flex items-center">
 						<svg class="fill-current h-5 w-5" viewBox="0 0 24 24">
