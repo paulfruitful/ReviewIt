@@ -86,7 +86,7 @@
 				<!-- Header -->
 
 				<div>
-					<span>
+					<span class="px-6">
 						<span class="text-green-500 dark:text-green-200">
 							@if (auth()->user()->products>0)
 							{{auth()->user()->products}}
@@ -94,9 +94,9 @@
 								0
 							@endif
 						</span>
-						Products;
+						Products
 					</span>
-					<span>
+					<span class="px-6">
 						<span class="text-green-500 dark:text-green-200">
 							@if (auth()->user()->feedbacks>0)
 							{{auth()->user()->feedbacks}}
@@ -108,8 +108,9 @@
 					</span>
 					
 				</div>
-				<div>
-					<span class="capitalize">
+				
+				<div class="">
+					<span class="capitalize px-3">
 						products
 						<span
 							class="text-green-500 dark:text-green-200
@@ -117,7 +118,7 @@
 							all
 						</span>
 					</span>
-					<span class="capitalize ml-12">
+					<span class="capitalize ml-4">
 						feedbacks
 						<span
 							class="text-green-500 dark:text-green-200
