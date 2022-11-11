@@ -36,7 +36,7 @@ Route::get('/user',function(){
 });
 Route::get('/logout',[userController::class,'logout']);
 
-Route::get('/product/create',[productController::class,'create']);
+Route::get('/product/create',[productController::class,'create'])->middleware('auth');
 
 Route::get('/user/{user}',function($user){
     
