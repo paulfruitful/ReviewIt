@@ -194,7 +194,9 @@
 			</div>
 
 			@empty
-				
+				<div class="text-center font-bold text-3xl">
+					-------- No Product Reviews Yet-------
+				</div>
 			@endforelse
 			
 		</div>
