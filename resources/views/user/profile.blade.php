@@ -88,8 +88,8 @@
 				<div>
 					<span class="px-6">
 						<span class="text-green-500 dark:text-green-200">
-							@if (auth()->user()->products>0)
-							{{auth()->user()->products}}
+							@if (count(auth()->user()->product)>0)
+							{{count(auth()->user()->product)}}
 							@else
 								0
 							@endif
@@ -140,8 +140,9 @@
 			</svg>
 		</a>
 			
-
+	
 			
+			@forelse (auth()->user()->product as $product)
 			<div
 				class="mt-8 mb-4 flex px-4 py-4 justify-between items-center bg-white
 				dark:bg-gray-600 shadow-xl rounded-lg cursor-pointer w-screen " style="margin-left:-39px; width:100vw;">
@@ -155,7 +156,7 @@
 						dark:text-gray-400">
 						<span>name</span>
 						<span class="mt-2 text-black dark:text-gray-200">
-							crysis
+							{{$product->title}}
 						</span>
 					</div>
 
@@ -173,9 +174,9 @@
 					<div
 						class="mr-16  flex flex-col capitalize text-gray-600
 						dark:text-gray-400">
-						<span>status</span>
-						<span class="mt-2 text-green-600 dark:text-green-400">
-							Active
+						<span></span>
+						<span class="mt-2 text-white bg-green-600 border-rounded shadow-xl dark:text-green">
+							View
 						</span>
 					</div>
 
@@ -192,6 +193,10 @@
 
 			</div>
 
+			@empty
+				
+			@endforelse
+			
 		</div>
 
 	</main>
