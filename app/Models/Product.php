@@ -15,7 +15,9 @@ class Product extends Model
         'description',
         'author',
         'upvote',
-        'downvote'
+        'downvote',
+        'user_id',
+        'author'
     ];
     public function user(){
         return $this->belongsTo(User::class,'user_id');

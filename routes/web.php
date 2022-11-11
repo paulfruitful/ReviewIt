@@ -37,6 +37,7 @@ Route::get('/user',function(){
 Route::get('/logout',[userController::class,'logout']);
 
 Route::get('/product/create',[productController::class,'create'])->middleware('auth');
+Route::post('/product/create',[productController::class,'store']);
 
 Route::get('/user/{user}',function($user){
     

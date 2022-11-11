@@ -28,10 +28,11 @@
       <svg class="mr-2 cursor-pointer hover:text-gray-700 border rounded-full p-1 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" /></svg>
       <div class="count ml-auto text-gray-400 text-xs font-semibold">0/300</div>
     </div>
+    <input type="hidden" name="user_id" value="{{auth()->id()}}">
     <!-- buttons -->
     <div class="buttons flex">
       <div class="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer text-gray-500 ml-auto">Cancel</div>
-      <div class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500">Post</div>
+      <div class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500"><button type="submit"> Post</button></div>
     </div>
   </div>
   <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>

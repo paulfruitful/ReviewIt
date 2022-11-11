@@ -24,4 +24,22 @@ class productController extends Controller
      $product->save();
      return back();
     }
+
+
+    public function store(Request $request){
+      $form_data=$request->validate([
+        'title'=>'required',
+        'description'=>'required',
+        'user_id'=>'required'
+      ]);
+
+      $form_data["upvote"]=0;
+      $form_data["downvote"]=0;
+      $form_data["author"]=auth()->user()->name;
+      Product::create(
+        $form_data
+      );
+
+      return redirect('/user/'.auth()->id())->with('success','Product Successfully Created');
+    }
 }
