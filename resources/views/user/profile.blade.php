@@ -172,8 +172,8 @@
 				
 
 					<div
-						class="mr-16  flex flex-col capitalize text-gray-600
-						dark:text-gray-400">
+						class="mr-16  flex flex-col capitalize text-white
+						dark:text-white">
 						<span></span>
 						<span class="mt-2 text-white bg-green-600 border-rounded shadow-xl dark:text-green">
 							View
