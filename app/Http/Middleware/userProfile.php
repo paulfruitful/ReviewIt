@@ -16,6 +16,11 @@ class userProfile
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        
+        if(auth()->id()==$request->user){
+           return $next($request); 
+        }else{
+        return abort('403');
+    }
     }
 }

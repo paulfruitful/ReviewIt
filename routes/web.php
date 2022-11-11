@@ -39,8 +39,7 @@ Route::get('/logout',[userController::class,'logout']);
 Route::get('/product/create',[productController::class,'create']);
 
 Route::get('/user/{user}',function($user){
-    if(auth()->id()==$user){
+    
     return view('user.profile');
-}
-return redirect('/');
-});
+
+})->middleware('user');
