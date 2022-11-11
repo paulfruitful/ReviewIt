@@ -132,7 +132,7 @@
 			</div>
 			<a
 			class="mt-8 flex items-center justify-between py-3 px-2 text-white
-			dark:text-gray-200 bg-green-400 dark:bg-green-500 rounded-lg shadow" href="/product/create">
+			dark:text-gray-200 bg-green-600 dark:bg-green-500 hover:bg-green-800 rounded-lg shadow" href="/product/create">
 			<!-- Action -->
 			<span>Add Product</span>
 			<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -175,7 +175,7 @@
 						class="mr-16  flex flex-col capitalize text-white
 						dark:text-white">
 						<span></span>
-						<span class="mt-2 text-white bg-green-600 border-rounded shadow-xl dark:text-green">
+						<span class="mt-6 text-white p-3 hover:bg-green-400 bg-green-600 rounded-lg shadow-xl dark:text-green">
 							View
 						</span>
 					</div>
