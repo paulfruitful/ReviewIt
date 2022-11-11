@@ -194,8 +194,8 @@
 			</div>
 
 			@empty
-				<div class="text-center font-bold text-3xl">
-					-------- No Product Reviews Yet-------
+				<div class="text-center font-bold mt-12 text-gray-400 text-xl">
+					--- No Product Reviews Found---
 				</div>
 			@endforelse
 			
