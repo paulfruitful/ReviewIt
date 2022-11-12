@@ -14,6 +14,7 @@ class productController extends Controller
     public function edit(Product $product, Request $request){
           if($product->id()==auth()->id()){
 
+      return view('product.edit',["product"=>$product]);
           }else{
             return abort('404');
           }
@@ -42,4 +43,16 @@ class productController extends Controller
 
       return redirect('/user/'.auth()->id())->with('success','Product Successfully Created');
     }
-}
+    public function update(Product $product, Request $request){
+      $form_data=$request->validate([
+        'title'=>'required',
+        'description'=>'required'
+      ]);
+
+      
+      $product->update($form_data);
+
+      return redirect('/product/'.$product->id)->with('success','Product Successfully Edited');
+    }
+
+  }
