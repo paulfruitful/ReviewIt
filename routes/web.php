@@ -38,7 +38,9 @@ Route::get('/logout',[userController::class,'logout']);
 
 Route::get('/product/create',[productController::class,'create'])->middleware('auth');
 Route::post('/product/create',[productController::class,'store']);
-
+Route::get('/product/{product}',[productController::class,'show']);
+Route::get('product/{product}/edit',[productController::class,'edit']);
+Route::put('/product/{product}/edit',[productController::class,'update']);
 Route::get('/user/{user}',function($user){
     
     return view('user.profile');

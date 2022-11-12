@@ -12,7 +12,7 @@ class productController extends Controller
     }
 
     public function edit(Product $product, Request $request){
-          if($product->id()==auth()->id()){
+          if($product->user_id==auth()->id()){
 
       return view('product.edit',["product"=>$product]);
           }else{
