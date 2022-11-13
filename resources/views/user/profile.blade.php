@@ -143,6 +143,7 @@
 	
 			
 			@forelse (auth()->user()->product as $product)
+			<a href="/product/{{$product->id}}">
 			<div
 				class="mt-8 mb-4 flex px-4 py-4 justify-between items-center bg-white
 				dark:bg-gray-600 shadow-xl rounded-lg cursor-pointer w-screen " style="margin-left:-39px; width:100vw;">
@@ -192,7 +193,7 @@
 				</div>
 
 			</div>
-
+</a>
 			@empty
 				<div class="text-center font-bold mt-12 text-gray-400 text-xl">
 					--- No Product Reviews Found---
