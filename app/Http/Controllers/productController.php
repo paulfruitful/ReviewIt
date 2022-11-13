@@ -25,7 +25,12 @@ class productController extends Controller
      $product->save();
      return back();
     }
-
+    public function downvote(Product $product){
+      $product->downvote+=1;
+      $product->save();
+      return back();
+     }
+ 
 
     public function store(Request $request){
       $form_data=$request->validate([
@@ -71,6 +76,7 @@ class productController extends Controller
     }
     }
   public function show(Product $product){
+    dd(request()->ip());
     return view('product.show',[
       'product'=>$product
     ]);

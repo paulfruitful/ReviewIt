@@ -42,6 +42,8 @@ Route::get('/product/{product}',[productController::class,'show']);
 Route::get('product/{product}/edit',[productController::class,'edit']);
 Route::put('/product/{product}/edit',[productController::class,'update']);
 Route::delete('/product/{product}/delete',[productController::class,'delete']);
+Route::get('/product/{product}/upvote',[productController::class,'upvote']);
+Route::get('/product/{product}/downvote',[productController::class,'downvote']);
 
 Route::get('/user/{user}',function($user){
     
