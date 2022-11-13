@@ -69,4 +69,11 @@ class productController extends Controller
     }else{
         return redirect('403');
     }
-    }}
+    }
+  public function show(Product $product){
+    return view('product.show',[
+      'product'=>$product
+    ]);
+  }
+  
+  }
