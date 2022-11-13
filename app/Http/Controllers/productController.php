@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class productController extends Controller
 {
@@ -23,12 +24,12 @@ class productController extends Controller
     public function upvote(Product $product){
      $product->upvote+=1;
      $product->save();
-     return back();
+     return back()->with('click','clicker');
     }
     public function downvote(Product $product){
       $product->downvote+=1;
       $product->save();
-      return back();
+      return back()->with('click','clicker');
      }
  
 
@@ -76,7 +77,6 @@ class productController extends Controller
     }
     }
   public function show(Product $product){
-    dd(request()->ip());
     return view('product.show',[
       'product'=>$product
     ]);

@@ -18,8 +18,15 @@
             <p class="mt-12 text-gray-600">{!!$product->description!!}</p>
         </div>
         <div class="flex justify-between items-center mt-4">
+            @if (session()->has('click'))
+                
+            <a class="text-blue-600 hover:underline" href=""> </a>
+            
+            <a class="text-blue-600 hover:underline" href=""></a>
+            @else
             <a class="text-blue-600 hover:underline" href="/product/{{$product->id}}/upvote">Upvote</a>
             <a class="text-blue-600 hover:underline" href="/product/{{$product->id}}/downvote">Downvote</a>
+            @endif
             <div>
                 <a class="flex items-center" href="#">
                     <img class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block" src="https://images.unsplash.com/photo-1502980426475-b83966705988?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=373&q=80" >
