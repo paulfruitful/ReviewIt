@@ -44,6 +44,8 @@ class productController extends Controller
       return redirect('/user/'.auth()->id())->with('success','Product Successfully Created');
     }
     public function update(Product $product, Request $request){
+      if($product->user_id==auth()->id()){
+
       $form_data=$request->validate([
         'title'=>'required',
         'description'=>'required'
@@ -51,8 +53,20 @@ class productController extends Controller
 
       
       $product->update($form_data);
-
+    
       return redirect('/product/'.$product->id)->with('success','Product Successfully Edited');
-    }
-
+  }else{
+    return abort('403');
   }
+}
+
+
+    public function delete(Product $product){
+      if($product->user_id==auth()->id()){
+
+       $product->delete();
+       return redirect('/user/'.auth()->id())->with('success','Product Deleted Successfully');
+    }else{
+        return redirect('403');
+    }
+    }}
