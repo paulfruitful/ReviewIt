@@ -98,8 +98,8 @@
 					</span>
 					<span class="px-6">
 						<span class="text-green-500 dark:text-green-200">
-							@if (auth()->user()->feedbacks>0)
-							{{auth()->user()->feedbacks}}
+							@if (count(auth()->user()->feedback)>0)
+							{{count(auth()->user()->feedback)}}
 							@else
 								0
 							@endif
