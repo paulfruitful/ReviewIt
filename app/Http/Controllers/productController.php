@@ -81,5 +81,12 @@ class productController extends Controller
       'product'=>$product
     ]);
   }
-  
+  public function feedback(Request $request, Product $product){
+    $form_data=$request->validate([
+      'title'=>'required',
+      'feedback'=>'required'
+    ]);
+    $form_data["upvote"]=0;
+      $form_data["downvote"]=0;
+  }
   }
