@@ -71,7 +71,8 @@
 <p class="text-center text-4xl font-bold my-8 text-gray-700">Drop A Feedback</p>
 <!-- comment form -->
 <div class="flex mx-auto items-center justify-center shadow-lg mt-8 w-full mb-4 ">
-    <form class="w-full max-w-xl bg-white rounded-lg px-4 pt-2">
+    <form class="w-full max-w-xl bg-white rounded-lg px-4 pt-2" action="/create/feedback" method="POST">
+      @csrf
        <div class="flex flex-wrap -mx-3 mb-6">
         <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Name</h2>
         <div class="w-full md:w-full px-3 mb-2 mt-2">
