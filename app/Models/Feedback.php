@@ -14,7 +14,8 @@ class Feedback extends Model
         'description',
         'name',
         'upvote',
-        'downvote'
+        'downvote',
+        'product_id'
     ];
     public function product(){
         return $this->belongsTo(Product::class,'product_id');

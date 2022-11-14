@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Feedback;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -82,11 +83,17 @@ class productController extends Controller
     ]);
   }
   public function feedback(Request $request, Product $product){
+    
     $form_data=$request->validate([
+      'name'=>'required',
       'title'=>'required',
       'feedback'=>'required'
     ]);
     $form_data["upvote"]=0;
       $form_data["downvote"]=0;
+      $form_data["product_id"]=$product->id;
+      Feedback::create($form_data);
+
+      return back()->with('success','feedback successfully sent');
   }
   }

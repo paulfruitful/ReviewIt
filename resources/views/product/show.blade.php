@@ -44,13 +44,13 @@
   
         
         </div>
-        <p class="text-center text-4xl font-bold my-8 text-gray-700">Feedbacks <span class="bg-green-600 rounded-full shadow-xl py-3 px-3 text-white">{{count($product->feedback)}}</span></p>
+      <!--  <p class="text-center text-4xl font-bold my-8 text-gray-700">Feedbacks <span class="bg-green-600 rounded-full shadow-xl py-3 px-3 text-white">{{count($product->feedback)}}</span></p>
         <div class="flex justify-center relative my-12 top-1/3">
 
 
 
 
-            <!-- This is an example component -->
+            <!-- This is an example component 
             <div class="relative w-full  grid grid-cols-1 gap-4 p-4  border rounded-lg bg-white shadow-lg">
                 <div class="relative flex gap-4">
                     <img src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/256/charlie-chaplin-icon.png" class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20" alt="" loading="lazy">
@@ -67,7 +67,7 @@
             
             
             
-            </div>
+            </div> -->
 <p class="text-center text-4xl font-bold my-8 text-gray-700">Drop A Feedback</p>
 <!-- comment form -->
 <div class="flex mx-auto items-center justify-center shadow-lg mt-8 w-full mb-4 ">
