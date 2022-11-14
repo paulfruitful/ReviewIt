@@ -11,7 +11,7 @@ class Feedback extends Model
     use HasFactory;
     protected $fillable=[
         'title',
-        'description',
+        'feedback',
         'name',
         'upvote',
         'downvote',
