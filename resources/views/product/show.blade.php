@@ -71,16 +71,20 @@
 <p class="text-center text-4xl font-bold my-8 text-gray-700">Drop A Feedback</p>
 <!-- comment form -->
 <div class="flex mx-auto items-center justify-center shadow-lg mt-8 w-full mb-4 ">
-    <form class="w-full max-w-xl bg-white rounded-lg px-4 pt-2" action="/create/feedback" method="POST">
+    <form class="w-full max-w-xl bg-white rounded-lg px-4 pt-2" action="/product/{{$product->id}}/create/feedback" method="POST">
       @csrf
        <div class="flex flex-wrap -mx-3 mb-6">
         <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Name</h2>
         <div class="w-full md:w-full px-3 mb-2 mt-2">
            <input class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full  py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" name="name" placeholder='Type Your Name' required>
         </div>
+        <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Title</h2>
+        <div class="w-full md:w-full px-3 mb-2 mt-2">
+           <input class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full  py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" name="title" placeholder='Type Your Subject' required>
+        </div>
           <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Add a new comment</h2>
           <div class="w-full md:w-full px-3 mb-2 mt-2">
-             <textarea class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" name="body" placeholder='Type Your Comment' required></textarea>
+             <textarea class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" name="feedback" placeholder='Type Your Comment' required></textarea>
           </div>
           <div class="w-full md:w-full flex items-start md:w-full px-3">
              <div class="flex items-start w-1/2 text-gray-700 px-2 mr-auto">
@@ -96,10 +100,12 @@
        </form>
     </div>
  </div>
+ <!--
 <div class="flex items-center justify-center p-12">
     <!-- Author: FormBold Team -->
     <!-- Learn More: https://formbold.com -->
-    <div class="mx-auto w-full max-w-[550px]">
+
+    <!--<div class="mx-auto w-full max-w-[550px]">
       <form action="/create/feedback" method="POST">
         @csrf
         <div class="mb-5">
@@ -157,7 +163,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </div>-->
   <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 
   <script>
