@@ -45,6 +45,8 @@ Route::delete('/product/{product}/delete',[productController::class,'delete']);
 Route::get('/product/{product}/upvote',[productController::class,'upvote']);
 Route::get('/product/{product}/downvote',[productController::class,'downvote']);
 
+Route::post('/product/{product}/create/feedback',[productController::class,'feedback']);
+
 Route::get('/user/{user}',function($user){
     
     return view('user.profile');
