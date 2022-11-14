@@ -37,11 +37,11 @@ Route::get('/user',function(){
 Route::get('/logout',[userController::class,'logout']);
 
 Route::get('/product/create',[productController::class,'create'])->middleware('auth');
-Route::post('/product/create',[productController::class,'store']);
+Route::post('/product/create',[productController::class,'store'])->middleware('auth');
 Route::get('/product/{product}',[productController::class,'show']);
-Route::get('product/{product}/edit',[productController::class,'edit']);
-Route::put('/product/{product}/edit',[productController::class,'update']);
-Route::delete('/product/{product}/delete',[productController::class,'delete']);
+Route::get('product/{product}/edit',[productController::class,'edit'])->middleware('auth');
+Route::put('/product/{product}/edit',[productController::class,'update'])->middleware('auth');
+Route::delete('/product/{product}/delete',[productController::class,'delete'])->middleware('auth');
 Route::get('/product/{product}/upvote',[productController::class,'upvote']);
 Route::get('/product/{product}/downvote',[productController::class,'downvote']);
 
