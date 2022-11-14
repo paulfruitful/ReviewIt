@@ -20,7 +20,7 @@ class userProfile
         if(auth()->id()==$request->user){
            return $next($request); 
         }else{
-        return abort('403');
+        return redirect('/');
     }
     }
 }

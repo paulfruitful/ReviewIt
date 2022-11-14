@@ -27,7 +27,7 @@ Route::post('/register',[userController::class,'store']);
 
 Route::get('/login',function(){
     return view('user.login');
-});
+})->name('login');
 
 Route::post('/login',[userController::class,'login']);
 });
@@ -51,4 +51,4 @@ Route::get('/user/{user}',function($user){
     
     return view('user.profile');
 
-})->middleware('user');
+})->middleware(['user','auth']);
