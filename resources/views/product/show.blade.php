@@ -11,7 +11,7 @@
     <div class="max-w-full h-full px-10 my-4 py-6 bg-white rounded-lg shadow-md">
         <div class="flex justify-between items-center">
             <span class="font-light text-gray-600">{{$product->created_at->format('jS F Y h:i:s A')}}</span>
-            <a class="px-3 py-3 bg-green-600 text-white font-bold rounded hover:bg-green-800" href="/">Review It</a>
+            <a class="px-3 py-3 bg-green-600 text-white font-bold rounded hover:bg-green-800" href="/">ReviewIt</a>
         </div>
         <div class="mt-2">
             <a class="text-2xl text-gray-700 font-bold hover:text-gray-600" href="#">{{$product->title}}</a>
