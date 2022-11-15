@@ -173,20 +173,11 @@
 				
 
 					<div
-						class="mr-16  flex flex-col capitalize text-white
-						dark:text-white">
-						<span></span>
-						<span class="mt-6 text-white p-3 hover:bg-green-400 bg-green-600 rounded-lg shadow-xl dark:text-green">
-							View
-						</span>
-					</div>
-
-					<div
 						class="mr-8 flex flex-col capitalize text-gray-600
 						dark:text-gray-400">
 						<span>Created At</span>
 						<span class="mt-2 text-green-400 dark:text-green-200">
-							{{$product->created_at->format('jS F Y h:i:s A')}}
+							{{$product->created_at->format('d-F-Y')}}
 						</span>
 					</div>
 
@@ -297,21 +288,13 @@
 
 			
 
-				<div
-					class="mr-16  flex flex-col capitalize text-white
-					dark:text-white">
-					<span></span>
-					<span class="mt-12 ml-12 text-white p-3 hover:bg-green-400 bg-green-600 rounded-lg shadow-xl dark:text-green">
-						View
-					</span>
-				</div>
 
 				<div
 					class="mr-8 flex flex-col capitalize text-gray-600
 					dark:text-gray-400">
 					<span>Created At</span>
 					<span class="mt-2 text-green-400 dark:text-green-200">
-						{{$product->created_at->format('jS F Y h:i:s A')}}
+						{{$product->created_at->format('d-F-Y')}}
 					</span>
 				</div>
 
