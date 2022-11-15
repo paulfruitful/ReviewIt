@@ -11,7 +11,7 @@
 	<main
 		class="flex-1 flex flex-col bg-gray-100 dark:bg-gray-700 transition
 		duration-500 ease-in-out overflow-y-auto">
-		<div class="mx-10 my-2">
+		<div class="mx-10 my-2" id="product">
 			<nav
 				class="flex flex-row justify-between border-b
 				dark:border-gray-600 dark:text-gray-400 transition duration-500
@@ -115,7 +115,7 @@
 						<span
 							class="text-green-500 dark:text-green-200
 							cursor-pointer">
-							all
+						<a href="#product">	all</a>
 						</span>
 					</span>
 					<span class="capitalize ml-4">
@@ -123,7 +123,7 @@
 						<span
 							class="text-green-500 dark:text-green-200
 							cursor-pointer">
-							all
+						<a href="#feedback">	all</a>
 						</span>
 					</span>
 
@@ -186,7 +186,7 @@
 						dark:text-gray-400">
 						<span>Created At</span>
 						<span class="mt-2 text-green-400 dark:text-green-200">
-							{{$product->created_at}}
+							{{$product->created_at->format('jS F Y h:i:s A')}}
 						</span>
 					</div>
 
@@ -201,7 +201,131 @@
 			@endforelse
 			
 		</div>
+		<div class="mx-10 my-2" id="feedback">
+		<h2 class="my-4 text-4xl font-semibold dark:text-gray-400">
+			Feedback list
+		</h2>
+		<div
+			class="pb-2 flex items-center justify-between text-gray-600
+			dark:text-gray-400 border-b dark:border-gray-600">
+			<!-- Header -->
 
+			<div>
+				<span class="px-6">
+					<span class="text-green-500 dark:text-green-200">
+						@if (count(auth()->user()->product)>0)
+						{{count(auth()->user()->product)}}
+						@else
+							0
+						@endif
+					</span>
+					Products
+				</span>
+				<span class="px-6">
+					<span class="text-green-500 dark:text-green-200">
+						@if (count(auth()->user()->feedback)>0)
+						{{count(auth()->user()->feedback)}}
+						@else
+							0
+						@endif
+					</span>
+					Feedbacks
+				</span>
+				
+			</div>
+			
+			<div class="">
+				<span class="capitalize px-3">
+					products
+					<span
+						class="text-green-500 dark:text-green-200
+						cursor-pointer">
+					<a href="#product">	all </a>
+					</span>
+				</span>
+				<span class="capitalize ml-4">
+					feedbacks
+					<span
+						class="text-green-500 dark:text-green-200
+						cursor-pointer">
+					<a href="#feedback">	all</a>
+					</span>
+				</span>
+
+			</div>
+
+		</div>
+	
+		
+		<a
+		class="mt-8 flex items-center justify-between py-3 px-2 text-white
+		dark:text-gray-200 bg-green-600 dark:bg-green-500 hover:bg-green-800 rounded-lg shadow" href="/product/create">
+		<!-- Action -->
+		<span>Add Product</span>
+		<svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+			<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+		</svg>
+	</a>
+		
+		@forelse (auth()->user()->feedback as $product)
+		<a href="/product/{{$product->id}}">
+		<div
+			class="mt-8 mb-4 flex px-4 py-4 justify-between items-center bg-white
+			dark:bg-gray-600 shadow-xl rounded-lg cursor-pointer w-screen " style="margin-left:-39px; width:100vw;">
+			<!-- Card -->
+
+			<div class="flex ">
+				<!-- Left side -->
+
+				<div
+					class="ml-4 flex flex-col capitalize text-gray-600
+					dark:text-gray-400">
+					<span>Title</span>
+					<span class="mt-2 text-black dark:text-gray-200">
+						{{$product->title}}
+					</span>
+				</div>
+
+			
+
+			</div>
+
+			<div class="flex">
+				<!-- Rigt side -->
+
+				
+
+			
+
+				<div
+					class="mr-16  flex flex-col capitalize text-white
+					dark:text-white">
+					<span></span>
+					<span class="mt-12 ml-12 text-white p-3 hover:bg-green-400 bg-green-600 rounded-lg shadow-xl dark:text-green">
+						View
+					</span>
+				</div>
+
+				<div
+					class="mr-8 flex flex-col capitalize text-gray-600
+					dark:text-gray-400">
+					<span>Created At</span>
+					<span class="mt-2 text-green-400 dark:text-green-200">
+						{{$product->created_at->format('jS F Y h:i:s A')}}
+					</span>
+				</div>
+
+			</div>
+
+		</div>
+</a>
+		@empty
+			<div class="text-center font-bold mt-12 text-gray-400 text-xl">
+				--- No Feedbacks Received---
+			</div>
+		@endforelse
+		
+	</div>
 	</main>
 
 </div>
