@@ -25,8 +25,8 @@
             
             <a class="text-blue-600 hover:underline" href=""></a>
             @else
-            <a class="text-green-600 text-sm hover:underline text-sm" href="/product/{{$product->id}}/upvote"><img src="https://cdn-icons-png.flaticon.com/512/880/880605.png" style="height:30px;" alt=""> Upvote</a>
-            <a class="text-green-600 text-sm hover:underline text-sm" href="/product/{{$product->id}}/downvote"><img src="https://cdn-icons-png.flaticon.com/512/25/25395.png" style="height: 30px;"> Downvote</a>
+            <a class="text-green-600 text-sm hover:underline text-sm" href="/product/{{$product->id}}/upvote"><img src="https://cdn-icons-png.flaticon.com/512/880/880605.png" style="height:30px;" alt="">{{$product->id==auth()->id()?$product->upvote:"0"}} Upvote{{$product->id==auth()->id()&& $product->upvote>1?"s":""}}</a>
+            <a class="text-green-600 text-sm hover:underline text-sm" href="/product/{{$product->id}}/downvote"><img src="https://cdn-icons-png.flaticon.com/512/25/25395.png" style="height: 30px;">{{$product->id==auth()->id()?$product->downvote:"0"}} Downvote{{$product->id==auth()->id()&& $product->downvote>1?"s":""}}</a>
             @endif
             <div>
                 <a class="flex items-center" href="#">
