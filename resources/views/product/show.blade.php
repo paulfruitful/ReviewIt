@@ -25,8 +25,10 @@
             
             <a class="text-blue-600 hover:underline" href=""></a>
             @else
-            <a class="text-green-600 text-sm hover:underline text-sm" href="/product/{{$product->id}}/upvote"><img src="https://cdn-icons-png.flaticon.com/512/880/880605.png" style="height:30px;" alt="">{{$product->id==auth()->id()?$product->upvote:"0"}} Upvote{{$product->id==auth()->id()&& $product->upvote>1?"s":""}}</a>
-            <a class="text-green-600 text-sm hover:underline text-sm" href="/product/{{$product->id}}/downvote"><img src="https://cdn-icons-png.flaticon.com/512/25/25395.png" style="height: 30px;">{{$product->id==auth()->id()?$product->downvote:"0"}} Downvote{{$product->id==auth()->id()&& $product->downvote>1?"s":""}}</a>
+            <div class="mt-8 flex items-center">
+            <a class="text-green-600 text-sm hover:underline mr-8 text-sm" href="{{$product->id==auth()->id()?"#":"/product/$product->id/upvote"}}"><img src="https://cdn-icons-png.flaticon.com/512/880/880605.png" style="height:30px;" alt="">{{$product->id==auth()->id()?$product->upvote:""}} Upvote{{$product->id==auth()->id()&& $product->upvote>1?"s":""}}</a>
+            <a class="text-green-600 text-sm hover:underline text-sm" href="/product/{{$product->id}}/downvote"><img src="https://cdn-icons-png.flaticon.com/512/25/25395.png" style="height: 30px;">{{$product->id==auth()->id()?$product->downvote:""}} Downvote{{$product->id==auth()->id()&& $product->downvote>1?"s":""}}</a>
+           </div>
             @endif
             <div>
                 <a class="flex items-center" href="#">
@@ -75,6 +77,7 @@
             
             </div>  @endforeach
                         @else
+            <p class="text-center p-6 m-auto text-gray-400 font-bold text-2xl">---No Feedbacks Yet---</p>
                         @endif
             @else
        
@@ -101,7 +104,9 @@
             
             
             
-            </div> --> @endif
+            </div> -->
+            
+            @endif
             
         @if (auth()->id()==$product->user_id)
         
