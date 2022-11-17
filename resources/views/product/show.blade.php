@@ -26,8 +26,8 @@
             <a class="text-blue-600 hover:underline" href=""></a>
             @else
             <div class="mt-8 flex items-center">
-            <a class="text-green-600 text-sm hover:underline mr-4 text-sm" href="{{$product->id==auth()->id()?"#":"/product/$product->id/upvote"}}"><img src="https://cdn-icons-png.flaticon.com/512/880/880605.png" style="height:30px;" alt="">{{$product->id==auth()->id()?$product->upvote:""}} Upvote{{$product->id==auth()->id()&& $product->upvote>1?"s":""}}</a>
-            <a class="text-green-600 text-sm hover:underline mr-8 text-sm" href="/product/{{$product->id}}/downvote"><img src="https://cdn-icons-png.flaticon.com/512/25/25395.png" style="height: 30px;">{{$product->id==auth()->id()?$product->downvote:""}} Downvote{{$product->id==auth()->id()&& $product->downvote>1?"s":""}}</a>
+            <a class="text-green-600 text-sm hover:underline mr-4 text-sm" href="{{$product->id==auth()->id()?"#":"/product/$product->id/upvote"}}"><img src="https://cdn-icons-png.flaticon.com/512/880/880605.png" style="height:30px;" alt="">{{$product->user_id==auth()->id()?$product->upvote:""}} Upvote{{$product->user_id==auth()->id()&& $product->upvote>1?"s":""}}</a>
+            <a class="text-green-600 text-sm hover:underline mr-8 text-sm" href="/product/{{$product->id}}/downvote"><img src="https://cdn-icons-png.flaticon.com/512/25/25395.png" style="height: 30px;">{{$product->user_id==auth()->id()?$product->downvote:""}} Downvote{{$product->user_id==auth()->id()&& $product->downvote>1?"s":""}}</a>
            </div>
             @endif
             <div>
