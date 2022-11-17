@@ -52,3 +52,9 @@ Route::get('/user/{user}',function($user){
     return view('user.profile');
 
 })->middleware(['user','auth']);
+
+Route::get('/user/{user}/settings',function($user){
+    
+    return view('user.settings');
+
+})->middleware(['user','auth']);
