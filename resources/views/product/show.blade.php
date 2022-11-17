@@ -70,7 +70,8 @@
                         <p class="text-gray-400 text-sm">{{$feedback->created_at->format('jS F Y h:i:s A')}}</p>
                     </div>
                 </div>
-                <p class="-mt-4 text-gray-500">{{$feedback->feedback}}</p>
+                <p class="-mt-4 text-gray-500">{{$feedback->feedback}} <br>
+                <span class="text-md mt-4 text-green-600 font-semibold"><a href="mailto:{{$feedback->email}}">Message</a></span></p>
             </div>
                
             
