@@ -87,7 +87,8 @@ class productController extends Controller
     $form_data=$request->validate([
       'name'=>'required',
       'title'=>'required',
-      'feedback'=>'required'
+      'feedback'=>'required',
+      'email'=>'required'
     ]);
     $form_data["upvote"]=0;
       $form_data["downvote"]=0;

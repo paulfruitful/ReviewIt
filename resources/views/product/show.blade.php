@@ -126,6 +126,10 @@
         <div class="w-full md:w-full px-3 mb-2 mt-2">
            <input class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full  py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" name="title" placeholder='Type Your Subject' required>
         </div>
+        <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Title</h2>
+        <div class="w-full md:w-full px-3 mb-2 mt-2">
+           <input class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full  py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" name="email" placeholder='Type Your Email' required>
+        </div>
           <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Add a new feedback</h2>
           <div class="w-full md:w-full px-3 mb-2 mt-2">
              <textarea class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" name="feedback" placeholder='Type Feedback' required></textarea>
