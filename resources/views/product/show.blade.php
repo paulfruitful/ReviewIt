@@ -134,7 +134,6 @@
                 <svg fill="none" class="w-5 h-5 text-gray-600 mr-1" viewBox="0 0 24 24" stroke="currentColor">
                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <p class="text-xs md:text-sm pt-px">Some HTML is okay.</p>
              </div>
              <div class="-mr-1">
                 <input type='submit' class="bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400 rounded-lg tracking-wide mr-1 hover:bg-gray-100" value='Post Comment'>
@@ -214,4 +213,94 @@
   <script>
       CKEDITOR.replace( 'feedback' );
   </script>-->
+
+  <!-- component -->
+  @if (auth()->id()==$product->user_id)
+ 
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
+
+<style>@import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css')</style>
+
+<div class="min-w-screen max-h-screen bg-white flex items-center justify-center my-12 px-5 py-5">
+    
+     <div class="bg-gray-800 text-white rounded shadow-xl py-5 px-5 w-full sm:w-2/3 md:w-1/2 lg:w-1/3" x-data="{cardOpen:false,cardData:cardData()}" x-init="$watch('cardOpen', value => value?(cardData.countUp($refs.total,0,{{count($product->feedback)+$product->upvote+$product->downvote}},null,0.8),cardData.sessions.forEach((el,i) => cardData.countUp($refs[`device${i}`],0,cardData.sessions[i].size,null,1.6))):null);setTimeout(()=>{cardOpen=true},100)">
+        <div class="flex w-full">
+            <h3 class="text-lg font-semibold leading-tight flex-1">Product Analytics</h3>
+            <div class="relative h-5 leading-none">
+                <button class="text-xl text-gray-500 hover:text-gray-300 h-6 focus:outline-none" @click.prevent="cardOpen=!cardOpen">
+                    <i class="mdi" :class="'mdi-chevron-'+(cardOpen?'up':'down')"></i>
+                </button>
+            </div>
+        </div>
+        <div class="relative overflow-hidden transition-all duration-500" x-ref="card" x-bind:style="`max-height:${cardOpen?$refs.card.scrollHeight:0}px; opacity:${cardOpen?1:0}`">
+            <div>
+                <div class="pb-4 lg:pb-6">
+                    <h4 class="text-2xl lg:text-3xl text-white font-semibold leading-tight inline-block" x-ref="total">0</h4>
+                </div>
+                <div class="pb-4 lg:pb-6">
+                    <div class="overflow-hidden rounded-full h-3 bg-gray-800 flex transition-all duration-500" :class="cardOpen?'w-full':'w-0'">
+                        <template x-for="(item,index) in cardData.sessions">
+                            <div class="h-full" :class="`bg-${item.color}`" :style="`width:${item.size}%`"></div>
+                        </template>
+                    </div>
+                </div>
+                <div class="flex -mx-4">
+                    <template x-for="(item,index) in cardData.sessions">
+                        <div class="w-1/3 px-4" :class="{'border-l border-gray-700':index!==0}">
+                            <div class="text-sm">
+                                <span class="inline-block w-2 h-2 rounded-full mr-1 align-middle" :class="`bg-${item.color}`">&nbsp;</span>
+                                <span class="align-middle" x-text="item.label">&nbsp;</span>
+                            </div>
+                            <div class="font-medium text-lg text-white">
+                                <span :x-ref="`device${index}`">0</span>%
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let cardData = function() {
+    return {
+        countUp: function(target,startVal,endVal,decimals,duration){
+            const countUp = new CountUp(target,startVal||0,endVal,decimals||0,duration||2);
+            countUp.start();
+        },
+        sessions: [
+            {
+                "label": "Approval",
+                "size": {!!$product->upvote!!}/{!!$product->upvote+$product->downvote !!} * 100 ,
+                "color": "green-600"
+            },
+            {
+                "label": "Dissapproval",
+                "size":{!!$product->downvote!!}/{!!$product->upvote+$product->downvote !!} * 100 ,
+                "color": "red-400"
+            },
+            {
+                "label": "Feedbacks",
+                "size":  {!!count($product->feedback)!!}/{{count($product->feedback)+$product->upvote+$product->downvote}} * 100,
+                "color": "indigo-200"
+            }
+        ]
+    }
+}
+</script>
+@else
+
+@endif
+<footer class="footer footer-center  w-full p-4 bg-green-600 text-white">
+      <div class="text-center">
+        <p>
+          Powered By 
+          <a class="font-bold text-md" href="/"
+            >ReviewIt</a
+          >
+        </p>
+      </div>
+    </footer>
 </html>
