@@ -61,5 +61,20 @@ class userController extends Controller
             return back()->withErrors(['error'=>'Invalid Login Details']);
         
     }
+    public function update(Request $request, User $user){
+        
+        $formData=$request->validate(
+           [
+             'name'=>'min:8',
+             'email'=>'email|unique:users|email:rfc,dns',
+             'password'=>['min:6','confirmed'],
+           
+           ]
+           );
+           $formData['password']=bcrypt($formData['password']);
+           $user->update($formData);
+          
+        return redirect('/user/'.auth()->id())->with('success','Account Created Successfully');
+       }
 
 }
