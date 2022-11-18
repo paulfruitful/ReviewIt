@@ -58,3 +58,5 @@ Route::get('/user/{user}/settings',function($user){
     return view('user.settings');
 
 })->middleware(['user','auth']);
+
+Route::put('/user/{user}/update',[userController::class,'update'])->middleware(['auth']);

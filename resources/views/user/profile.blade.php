@@ -6,6 +6,21 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
+<nav class="navbar navbar-expand-lg shadow-md py-5 bg-white relative flex items-center w-full justify-between">
+    <div class="px-6 w-full flex flex-wrap items-center justify-between">
+      <div class="flex items-center">
+ 
+        <a class="navbar-brand text-black text-3xl font-bold" href="#!">
+         Review<span class="text-3xl text-green-600 ">It</span>
+        </a>
+      </div>
+      <div class="flex items-center items-center lg:ml-auto   ">
+       <a class="inline-block px-6 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" href="/product/create">Create</a>
+      </div>
+    
+    </div>
+  </nav>
+
 <div class="h-screen w-screen flex overflow">
 	
 	<main
