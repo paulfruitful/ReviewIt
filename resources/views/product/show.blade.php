@@ -29,8 +29,11 @@
           
         <div class="flex justify-between items-center mt-4 mb-8">
             <a href="/product/{{$product->id}}/edit" class="text-white bg-green-600 rounded-lg shadow-lg mx-4 py-3 px-6 font-semibold">Edit</a>
-            <a href="/product/{{$product->id}}/delete" class="text-white bg-red-800 rounded-lg shadow-lg py-3 mx-4 px-6 font-semibold">Delete</a>
-
+            <form action="/product/{{$product->id}}/delete" method="post">
+              @csrf
+              @method('DELETE')
+            <button type="submit"  class="text-white bg-red-800 rounded-lg shadow-lg py-3 mx-4 px-6 font-semibold">Delete</a>
+</form>
         </div>
           @else
               
