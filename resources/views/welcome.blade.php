@@ -144,9 +144,9 @@
                 ">
               <h2 class="text-3xl text-green-600 font-bold mb-6">Why is it so great?</h2>
               <p class="text-gray-500 mb-6">
-                Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque iaculis
-                malesuada. Aenean gravida magna orci, non efficitur est porta id. Donec magna
-                diam.
+               Breaking the gap between businesses and customers.
+               A platform where customers can help businesses make better decisions when it comes to creating, or updating already existing products.
+               Providing maximum satisfaction to both businesses and customers.
               </p>
 
               <div class="grid md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-x-6">
@@ -170,15 +170,7 @@
                   </p>
                 </div>
 
-                <div class="mb-6">
-                  <p class="flex items-center">
-                    <svg class="w-4 h-4 mr-2 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                      </path>
-                    </svg>Components
-                  </p>
-                </div>
+                
                 <div class="mb-6">
                   <p class="flex items-center">
                     <svg class="w-4 h-4 mr-2 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -195,7 +187,7 @@
                       <path fill="currentColor"
                         d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                       </path>
-                    </svg>Reports
+                    </svg>Regular Notifications
                   </p>
                 </div>
 
@@ -205,16 +197,7 @@
                       <path fill="currentColor"
                         d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                       </path>
-                    </svg>Mobile
-                  </p>
-                </div>
-                <div class="mb-6">
-                  <p class="flex items-center">
-                    <svg class="w-4 h-4 mr-2 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                      </path>
-                    </svg>Modules
+                    </svg>Mobile Friendly
                   </p>
                 </div>
 
@@ -224,19 +207,14 @@
                       <path fill="currentColor"
                         d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
                       </path>
-                    </svg>Blocks
+                    </svg>Maximum Security
                   </p>
                 </div>
+               
 
-                <div class="mb-6">
-                  <p class="flex items-center">
-                    <svg class="w-4 h-4 mr-2 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path fill="currentColor"
-                        d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                      </path>
-                    </svg>Templates
-                  </p>
-                </div>
+               
+
+            
               </div>
             </div>
           </div>
@@ -265,88 +243,8 @@
       <div class="block rounded-lg shadow-lg py-10 md:py-12 px-2 md:px-6"
         style="margin-top: -100px; background: hsla(0, 0%, 100%, 0.8); backdrop-filter: blur(30px);">
         <div class="flex flex-wrap">
-          <div class="grow-0 shrink-0 basis-auto w-full xl:w-5/12 px-3 lg:px-6 mb-12 xl:mb-0">
-            <form>
-              <div class="form-group mb-6">
-                <input type="text" class="form-control block
-                w-full
-                px-3
-                py-1.5
-                text-base
-                font-normal
-                text-gray-700
-                bg-white bg-clip-padding
-                border border-solid border-gray-300
-                rounded
-                transition
-                ease-in-out
-                m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
-                  placeholder="Name">
-              </div>
-              <div class="form-group mb-6">
-                <input type="email" class="form-control block
-                w-full
-                px-3
-                py-1.5
-                text-base
-                font-normal
-                text-gray-700
-                bg-white bg-clip-padding
-                border border-solid border-gray-300
-                rounded
-                transition
-                ease-in-out
-                m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
-                  placeholder="Email address">
-              </div>
-              <div class="form-group mb-6">
-                <textarea class="
-                form-control
-                block
-                w-full
-                px-3
-                py-1.5
-                text-base
-                font-normal
-                text-gray-700
-                bg-white bg-clip-padding
-                border border-solid border-gray-300
-                rounded
-                transition
-                ease-in-out
-                m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-              " id="exampleFormControlTextarea13" rows="3" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group form-check text-center mb-6">
-                <input type="checkbox"
-                  class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
-                  id="exampleCheck87" checked>
-                <label class="form-check-label inline-block text-gray-800" for="exampleCheck87">Send me a copy of this
-                  message</label>
-              </div>
-              <button type="submit" class="
-              w-full
-              px-6
-              py-2.5
-              bg-blue-600
-              text-white
-              font-medium
-              text-xs
-              leading-tight
-              uppercase
-              rounded
-              shadow-md
-              hover:bg-blue-700 hover:shadow-lg
-              focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-              active:bg-blue-800 active:shadow-lg
-              transition
-              duration-150
-              ease-in-out">Send</button>
-            </form>
-          </div>
+         
+          
           <div class="grow-0 shrink-0 basis-auto w-full xl:w-7/12">
             <div class="flex flex-wrap">
               <div class="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 px-3 lg:px-6">
@@ -363,8 +261,8 @@
                   </div>
                   <div class="grow ml-6">
                     <p class="font-bold mb-1">Technical support</p>
-                    <p class="text-gray-500">support@example.com</p>
-                    <p class="text-gray-500">+1 234-567-89</p>
+                    <p class="text-gray-500">techtasktechnologies@gmail.com</p>
+                    <p class="text-gray-500">+234 811-4483-062</p>
                   </div>
                 </div>
               </div>
@@ -381,9 +279,9 @@
                     </div>
                   </div>
                   <div class="grow ml-6">
-                    <p class="font-bold mb-1">Sales questions</p>
-                    <p class="text-gray-500">sales@example.com</p>
-                    <p class="text-gray-500">+1 234-567-89</p>
+                    <p class="font-bold mb-1">Enquiries</p>
+                    <p class="text-gray-500">techtasktechnologies@gmail.com</p>
+                    <p class="text-gray-500">+234 906-6524-815</p>
                   </div>
                 </div>
               </div>
