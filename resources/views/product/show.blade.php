@@ -18,7 +18,23 @@
             <a class="text-2xl text-gray-700 font-bold hover:text-gray-600" href="#">{{$product->title}}</a>
             <p class="mt-12 text-gray-600">{!!$product->description!!}</p>
         </div>
-        <div class="flex justify-between items-center mt-4">
+
+        @if ($product->user_id==auth()->id())
+        <div class="flex justify-between items-center mt-4 mb-8">
+          <p class="font-semibold p-6  text-black text-md">You Have <span class="font-bold text-green-600"> {{$product->upvote}} Upvotes</span> and <span class="font-bold text-red-700"> {{$product->downvote}} Downvotes</span> </p>
+       </div>
+        @endif
+        <div class="flex justify-between items-center mt-8">
+          @if ($product->user_id==auth()->id())
+          
+        <div class="flex justify-between items-center mt-4 mb-8">
+            <a href="/product/{{$product->id}}/edit" class="text-white bg-green-600 rounded-lg shadow-lg mx-4 py-3 px-6 font-semibold">Edit</a>
+            <a href="/product/{{$product->id}}/delete" class="text-white bg-red-800 rounded-lg shadow-lg py-3 mx-4 px-6 font-semibold">Delete</a>
+
+        </div>
+          @else
+              
+         
             @if (session()->has('click'))
                 
             <a class="text-blue-600 hover:underline" href=""> </a>
@@ -26,10 +42,10 @@
             <a class="text-blue-600 hover:underline" href=""></a>
             @else
             <div class="mt-8 flex items-center">
-            <a class="text-green-600 text-sm hover:underline mr-4 text-sm" href="{{$product->id==auth()->id()?"#":"/product/$product->id/upvote"}}"><img src="https://cdn-icons-png.flaticon.com/512/880/880605.png" style="height:30px;" alt="">{{$product->user_id==auth()->id()?$product->upvote:""}} Upvote{{$product->user_id==auth()->id()&& $product->upvote>1?"s":""}}</a>
-            <a class="text-green-600 text-sm hover:underline mr-8 text-sm" href="/product/{{$product->id}}/downvote"><img src="https://cdn-icons-png.flaticon.com/512/25/25395.png" style="height: 30px;">{{$product->user_id==auth()->id()?$product->downvote:""}} Downvote{{$product->user_id==auth()->id()&& $product->downvote>1?"s":""}}</a>
+            <a class="text-green-600 text-sm hover:underline mr-4 text-sm" href="/product/{{$product->id}}/upvote"><img src="https://cdn-icons-png.flaticon.com/512/880/880605.png" style="height:30px;" alt=""> Upvote</a>
+            <a class="text-green-600 text-sm hover:underline mr-8 text-sm" href="/product/{{$product->id}}/downvote"><img src="https://cdn-icons-png.flaticon.com/512/25/25395.png" style="height: 30px;">Downvote</a>
            </div>
-            @endif
+            @endif @endif
             <div>
                 <a class="mt-12 flex items-center" href="#">
                     <img class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block" src="https://images.unsplash.com/photo-1502980426475-b83966705988?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=373&q=80" >
@@ -229,7 +245,7 @@
 
 <div class="min-w-screen max-h-screen bg-white flex items-center justify-center my-12 px-5 py-5">
     
-     <div class="bg-gray-800 text-white rounded shadow-xl py-5 px-5 w-full sm:w-2/3 md:w-1/2 lg:w-1/3" x-data="{cardOpen:false,cardData:cardData()}" x-init="$watch('cardOpen', value => value?(cardData.countUp($refs.total,0,{{count($product->feedback)+$product->upvote+$product->downvote}},null,0.8),cardData.sessions.forEach((el,i) => cardData.countUp($refs[`device${i}`],0,cardData.sessions[i].size,null,1.6))):null);setTimeout(()=>{cardOpen=true},100)">
+     <div class="bg-gray-800 text-white rounded shadow-xl py-5 px-5 w-full sm:w-2/3 md:w-1/2 lg:w-1/3" x-data="{cardOpen:false,cardData:cardData()}" x-init="$watch('cardOpen', value => value?(cardData.countUp($refs.total,0,{{count($product->feedback)+$product->upvote+$product->downvote }},null,0.8),cardData.sessions.forEach((el,i) => cardData.countUp($refs[`device${i}`],0,cardData.sessions[i].size,null,1.6))):null);setTimeout(()=>{cardOpen=true},100)">
         <div class="flex w-full">
             <h3 class="text-lg font-semibold leading-tight flex-1">Product Analytics</h3>
             <div class="relative h-5 leading-none">
