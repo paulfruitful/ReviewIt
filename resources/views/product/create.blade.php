@@ -10,13 +10,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
+</head><nav class="navbar navbar-expand-lg shadow-md py-5 bg-white relative flex items-center w-full justify-between">
+  <div class="px-6 w-full flex flex-wrap items-center justify-between">
+    <div class="flex items-center">
+
+      <a class="navbar-brand text-black text-3xl font-bold" href="#!">
+       Review<span class="text-3xl text-green-600 ">It</span>
+      </a>
+    </div>
+    <div class="flex items-center items-center lg:ml-auto   ">
+     <a class="inline-block px-6 py-2.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out" href="/user/{{auth()->id()}}">Back</a>
+    </div>
+  
+  </div>
+</nav>
+
 <form action="/product/create" method="post">
     @csrf
 <div class="heading text-center font-bold text-2xl m-5 text-gray-800">New Review</div>
 <style>
   body {background:white !important;}
 </style>
+
   <div class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
     <input class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="true" name="title" placeholder="Title" type="text">
     <textarea class="description bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="true" placeholder="Describe everything about this post here" name="description"></textarea>
@@ -32,7 +47,7 @@
     <!-- buttons -->
     <div class="buttons flex">
       <div class="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer text-gray-500 ml-auto">Cancel</div>
-      <div class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500"><button type="submit"> Post</button></div>
+      <div class="btn border border-green-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-green-600"><button type="submit"> Post</button></div>
     </div>
   </div>
   <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>

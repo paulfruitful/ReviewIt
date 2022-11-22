@@ -274,7 +274,7 @@
 	</a>
 		
 		@forelse (auth()->user()->feedback as $product)
-		<a href="/product/{{$product->id}}">
+		<a href="/product/{{$product->product->id}}">
 		<div
 			class="mt-8 mb-4 flex px-4 py-4 justify-between items-center bg-white
 			dark:bg-gray-600 shadow-xl rounded-lg cursor-pointer w-screen " style="margin-left:-39px; width:100vw;">
